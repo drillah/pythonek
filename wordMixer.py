@@ -10,4 +10,4 @@ correct = word
 
 jumble = ""
 
-while word:c
+#while word
