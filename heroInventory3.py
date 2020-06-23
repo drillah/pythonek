@@ -1,0 +1,49 @@
+#Tworzenie listy i wyświetlanie przy pomocy pętli for
+
+inventory = ["miecz", "zbroja", "tarcza", "napój uzdrawiający"]
+print("Elementy Twojego inwentarza:")
+for item in inventory:
+    print(item)
+print("Twój inwentarz posiada", len(inventory), "przedmiotów")
+if "napój uzdrawiający" in inventory:
+    print("\nPosiadasz moc która pozwoli Ci przetwać")
+
+#wyświetla jeden element wskazany przez indeks
+index = int(input("\nWprowadź indeks elementu inwentarza: "))
+print("Pod indeksem", index, "znajduje się", inventory[index])
+
+#wyświetl wycinek
+start = int(input("Wprowadź indeks wyznaczający początek wycinka: "))
+finish = int(input("Wprowadź indeks wyznaczający koniec wycinka: "))
+print("inventory[", start, ":", finish, "] to", end=" ")
+print(inventory[start:finish])
+
+#konkatenacja dwóch list
+chest = ["złoto", "klejnony"]
+print("Znajdujesz skrzynię, która zawiera:")
+print(chest)
+print("Dodajes zawartość skrzyni do swojego inwentarza.")
+inventory += chest
+print("Twój aktualny inwentarz to:")
+print(inventory)
+
+#przypisz poprzez wycinek
+print("Zużywasz swoej złoto i klejnoty na zakup kuli do wróżenia.")
+inventory[4:6] = ["kula do wróżenia"]
+print("Twój aktualny inwentarz to:")
+print(inventory)
+
+print("W wielkiej bitwie Twoja tarcza zostaje zniszczona.")
+del inventory[2]
+print("Twój aktualny inwentarz to:")
+print(inventory)
+
+print("Znajdujesz kuszę która zastępuje Ci miecz")
+inventory[0] = "kusza"
+print("Aktualnie twój inwentarz wygląda następująco:")
+print(inventory)
+
+print("Zostałeś napadnięty i zabrano Ci", inventory[0], "i", inventory[1], "obecnie w twoim inwentarzu znajdują się:")
+del inventory[:2]
+print(inventory)
+input("Aby zakończyć grę, naciśnij klawisz Enter.")
