@@ -18,5 +18,12 @@ while choice != "0":
 
     choice = input("Wybierasz: ")
     print()
-    if choice =="0":
+    if choice == "0":
         print("Do widzenia.")
+    elif choice == "1":
+        print("Najlepsze wyniki:")
+        for score in scores:
+            print(score)
+    elif choice == "2":
+        score = int(input("Jaki wynik uzyskałeś?: "))
+        scores.append(score)
