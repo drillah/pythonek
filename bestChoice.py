@@ -27,3 +27,15 @@ while choice != "0":
     elif choice == "2":
         score = int(input("Jaki wynik uzyskałeś?: "))
         scores.append(score)
+    elif choice == "3":
+        score = int(input("Który wynik usunąć?:" ))
+        if score in scores:
+            scores.remove(score)
+        else:
+            print(score, "nie ma na liście wyników")
+    elif choice == "4":
+        scores.sort(reverse="True")
+    else:
+        print("Niestety,", choice, "nie jest prawidłowym wyborem.")
+
+input("\n\nAby zakończyć program, naciśnij klawisz Enter.")
