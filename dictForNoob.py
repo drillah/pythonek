@@ -1,0 +1,1 @@
+person = {"wiek" : 20, "imie" : "Marian", "nazwisko" : "Kowalski"}
